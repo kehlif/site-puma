@@ -1,0 +1,306 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+}
+
+header {
+  background: url("../images/fond_header.gif") 0 0 repeat-x;
+  width: 100%;
+  height: 72px;
+}
+
+header img{
+  margin-left: 420px;
+}
+
+main {
+  background: url("../images/slide.jpg") center no-repeat;
+  width: 100%;
+  background-size: cover;
+  height: 605px;
+  z-index: -1;
+  position: absolute;
+}
+
+main h2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:white;
+  margin:80px;
+  font-weight: bold;
+  font-size: 34px;
+}
+
+main img{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: auto;
+  height:100px;
+  width:100px;
+}
+
+main a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  height:50px;
+  width:150px;
+  background: transparent;
+  border-radius: 10px;
+  color:white;
+  border:1px solid white;
+}
+
+main a:hover{
+  text-decoration: none;
+  background: crimson;
+}
+
+
+/*section paragraphe*/
+.paragraphe {
+  text-align: center;
+  margin: 0px auto;
+  height: 166px;
+  width: 756px;
+  margin-top: 0px;
+  padding-top: 20px;
+}
+
+.paragraphe h3 {
+  font-size: 14px;
+  color: lightgrey;
+}
+
+.parent {
+  display: flex;
+  justify-content: center;
+  margin: 0px auto;
+  flex-wrap: wrap;
+  width:756px;
+}
+
+
+/*SECTION BOX*/
+.box {
+  border: 1px solid;
+  height: 379px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+
+}
+
+.box-star + .box {
+  margin-top: 0px;
+}
+
+.box2 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box2 div {
+  width: 188px;
+  height: 188px;
+}
+
+.box-star, .box-tattoo {
+  border: 1px solid;
+  height: 379px;
+  width: 758px;
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+}
+
+.box2-star, .box2-tattoo {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box2-star div, .box2-tattoo div {
+  width: 188px;
+  height: 188px;
+}
+
+
+/*Section bouton plus d'infos*/
+.plus_info {
+  height: 125px;
+  display: flex;
+  justify-content: center;
+}
+
+.plus_info button {
+  margin: auto;
+  border-color: grey;
+  border: 2px solid grey;
+}
+
+/*section partenaires*/
+.partenaires {
+  display: flex;
+  justify-content: center;
+  margin:0px;
+  width:100%;
+  background: #E1E1E1;
+}
+
+
+/*centrer tous les paragraphes*/
+p {
+  text-align: center;
+  padding-top: 50px;
+}
+
+/*insertion et centrage des font-awesome*/
+i {
+  text-align: center;
+  padding-left: 80px;
+  color: orange;
+}
+
+
+/*footer*/
+footer{
+  background: black;
+  color:white;
+  height:307px;
+}
+
+.footer {
+  display:flex;
+  justify-content: center;
+  flex-direction: row ;
+  margin: 0px auto;
+  padding-top:42px;
+}
+
+.footer img{
+  margin:auto;
+}
+
+footer nav{
+  height:120px;
+  padding-top: 42px;
+  margin: 0px 40px 0px;
+  border-bottom: 1px solid;
+}
+
+footer nav ul li {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  float: left;
+  margin:15px;
+}
+
+footer nav ul li:hover{
+  font-weight: bold;
+  text-decoration: underline orange;
+
+}
+
+
+/*animation*/
+.global{
+  width: 756px;
+  height:auto;
+  display: flex;
+  flex-flow: row ;
+  justify-content: center;
+  margin: 481px auto 0px;
+  z-index: 2;
+
+}
+.container{
+  width: 378px;
+  perspective: 1000px;
+  padding:0px;
+}
+
+.container:hover .page{
+  transform: rotateY(180deg);
+  /*transform-origin: 0px 50px;*/
+}
+
+.container, .devant, .arriere .nixon {
+  width:378px;
+  height: 255px;
+}
+
+.page{
+  transition: .6s;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.devant, .arriere {
+   backface-visibility: hidden;
+   position: absolute;
+   top:0;
+   left:0;
+ }
+
+ .arriere {
+   background: black;
+   padding: 25px;
+   color:white;
+   text-align: center;
+   transform: rotateY(180deg);
+   animation:1s fati  1s linear 1;
+ }
+
+ p{
+
+   margin:10px;
+ }
+
+ @keyframes fati{
+   0%{opacity:0}
+   100%{opacity: 1}
+ }
+
+.devant{
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+a{
+  display: block;
+  width: 100px;
+  height: 40px;
+  line-height: 40px;
+  background: transparent;
+  border-radius: 15px;
+  border:1px solid white;
+  margin: 50px auto 0;
+  text-align: center;
+  text-decoration: none;
+  color:white;
+  font-size: 14px;
+}
+
+a:hover{
+  background:yellow;
+  border:1px dashed blue;
+}
+
+.reseau{
+  height:45px;
+  display: flex;
+  justify-content: center;
+  margin:auto;
+}
+.reseau img{
+  width:50px;
+  height: 50px;
+  margin:10px;
+}
